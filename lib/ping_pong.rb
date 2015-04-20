@@ -4,7 +4,15 @@ class Fixnum
     arr = [ ]
     x = 1
     self.times() do
-      arr.push(x)
+      if x % 3 == 0 && x % 5 != 0#had this as self
+        arr.push("ping")
+      elsif x % 5 == 0 && x % 3 != 0
+        arr.push("pong")
+      elsif x % 3 == 0 && x % 5 == 0
+        arr.push("ping-pong")
+      else
+        arr.push(x)
+      end
       x += 1
     end
     arr
