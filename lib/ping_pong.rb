@@ -3,14 +3,12 @@ class Fixnum
   define_method(:ping_pong) do
     arr = [ ]
     x = 1
-    self.times() do |number|
-      arr.push(number)
-
+    self.times() do
+      arr.push(x)
+      x += 1
     end
-    x += 1
     arr
   end
-
 end
 
 
